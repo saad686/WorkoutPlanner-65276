@@ -15,6 +15,34 @@ def suggest_plan(bmi):
     else:
         return ("🏋️ Workout: 60 mins intense cardio\n🍽️ Diet: Very low-carb, avoid sugar and processed food")
 
+def suggest_plan(bmi):
+    if bmi < 18.5:
+        return (
+            "🏋️ Workout: 20 mins light exercise\n"
+            "📍 Location: Home\n"
+            "🍽️ Diet: High-calorie diet, focus on protein and carbs"
+        )
+    elif 18.5 <= bmi < 25:
+        return (
+            "🏋️ Workout: 30 mins moderate exercise\n"
+            "📍 Location: Home or Gym\n"
+            "🍽️ Diet: Balanced diet with veggies, protein, and healthy fats"
+        )
+    elif 25 <= bmi < 30:
+        return (
+            "🏋️ Workout: 45 mins cardio + strength\n"
+            "📍 Location: Gym recommended\n"
+            "🍽️ Diet: Low-carb, high-protein meals"
+        )
+    else:
+        return (
+            "🏋️ Workout: 60 mins intense cardio\n"
+            "📍 Location: Gym required for equipment\n"
+            "🍽️ Diet: Very low-carb, avoid sugar and processed food"
+        )
+
+
+
 def on_submit():
     try:
         weight_input = weight_entry.get().strip()
